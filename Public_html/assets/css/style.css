@@ -30,7 +30,8 @@ body {
     display: flex;
 }
 
-/* Sección de imagen/content a la izquierda */
+/* ──────────────── SECCIÓN LOGIN ──────────────── */
+
 .image-section {
     flex: 1;
     background: linear-gradient(135deg, var(--darker-blue) 0%, var(--dark-blue) 100%);
@@ -210,12 +211,12 @@ body {
 }
 
 .btn {
-    width: 100%;
-    padding: 1rem;
-    background: var(--primary-blue);
-    color: white;
-    border: none;
-    border-radius: 10px;
+ width: 100%;
+    padding: 1rem;    border-radius: 15px;
+    text-decoration: none;
+    color: var(--text-light);          /* texto claro */
+    background-color: var(--primary-blue); /* fondo principal */
+    border: 1px solid var(--primary-blue); /* borde principal */
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
@@ -224,13 +225,15 @@ body {
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--hover-blue) 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 7px 15px var(--shadow-blue);
+    background-color: var(--darker-blue); /* fondo más oscuro al pasar el mouse */
+    border: 1px solid var(--secondary-blue);   /* borde más claro que el fondo */
+    color: var(--text-light);           /* mantener el texto visible */
 }
 
-.btn:active {
-    transform: translateY(0);
+.btn.active {
+    background-color: var(--secondary-blue); /* fondo activo */
+    color: white;
+    border-color: var(--secondary-blue);     /* borde igual que el fondo */
 }
 
 .error-message {
@@ -243,3 +246,5 @@ body {
     text-align: center;
     font-size: 0.95rem;
 }
+
+/* ──────────────── FIN SECCIÓN LOGIN ──────────────── */
