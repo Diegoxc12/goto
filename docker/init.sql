@@ -6,7 +6,7 @@ USE goto_db;
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 06-10-2025 a las 16:42:44
+-- Tiempo de generación: 06-10-2025 a las 17:46:23
 -- Versión del servidor: 10.4.32-MariaDB-1:10.4.32+maria~ubu2004
 -- Versión de PHP: 8.2.27
 
@@ -118,9 +118,16 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(100) NOT NULL,
   `apellido` varchar(100) NOT NULL,
   `email` varchar(150) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `contrasenia` varchar(255) NOT NULL,
   `fecha_creacion` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellido`, `email`, `contrasenia`, `fecha_creacion`) VALUES
+(1, 'Admin', 'Prueba', 'Admin@gmail.com', '$2y$12$NrhoAih.jeQmsoRrnZav0.8M6DPd7212/htRu7PaN.PXgAO9b8OPK', '2025-10-06 16:59:22');
 
 --
 -- Índices para tablas volcadas
@@ -199,7 +206,7 @@ ALTER TABLE `ingresos`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
