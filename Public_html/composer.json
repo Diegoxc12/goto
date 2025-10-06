@@ -1,0 +1,12 @@
+{
+    "name": "goto/proyecto",
+    "description": "Proyecto goto",
+    "authors": [
+        {
+            "name": "TuNombre"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^4.5"
+    }
+}
