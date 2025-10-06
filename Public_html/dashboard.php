@@ -1,4 +1,8 @@
 
+<?php
+
+include "./includes/header_menu.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
+
+    <div class="main-content">
+        <div class="wrap">
+        <h1>Inicio</h1>
+        <h2>Bienvenido al panel de control de Goto</h2>
+        </div>
+
+
+
+    </div>
 </body>
 </html>
