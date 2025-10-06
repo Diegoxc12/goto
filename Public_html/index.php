@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     <!-- Sección de imagen a la izquierda -->
     <section class="image-section">
         <div class="image-content">
-            <h1>ControlBox</h1>
+            <h1>Goto</h1>
             <p>Una plataforma diseñada para optimizar el control de tus productos de forma eficiente y moderna.</p>
             
             <div class="features">
