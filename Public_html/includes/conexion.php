@@ -20,14 +20,6 @@ try {
     // Forzar collation/charset de la sesión de MySQL
     $pdo->exec("SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci");
     $pdo->exec("SET collation_connection = 'utf8mb4_unicode_ci'");
-
-    // Verificar si la conexión se estableció correctamente
-    if ($pdo) {
-        echo "Conexión establecida correctamente a la base de datos '$db'.";
-    } else {
-        echo "No se pudo establecer la conexión a la base de datos.";
-    }
-
 } catch (PDOException $e) {
     // Mostrar mensaje de error en pantalla y detener ejecución
     die("Error al conectar a la base de datos: " . $e->getMessage());

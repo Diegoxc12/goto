@@ -3,7 +3,7 @@
 session_start();
 
 // Incluir la conexión
-require_once './conexion.php';
+require_once 'conexion.php';
 
 // Verificar si existe sesión
 if (!isset($_SESSION['id_usuario'])) {
