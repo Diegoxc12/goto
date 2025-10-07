@@ -265,18 +265,10 @@ $pagina_actual = basename($_SERVER['PHP_SELF']);
                     <i class="fas fa-folder-open"></i>
                     <span>Inventario</span>
                 </a>
-                <ul class="submenu-items <?php echo (in_array($pagina_actual, ['import_form.php', 'imagenes_producto_batch.php'])) ? 'submenu-active' : ''; ?>">
+                <ul class="submenu-items <?php echo (in_array($pagina_actual, ['import_form.php', 'bodegas.php'])) ? 'submenu-active' : ''; ?>">
                     <li class="nav-item">
-                        <a href="../includes/imagenes_producto_batch.php" class="nav-link submenu-link <?php echo ($pagina_actual == 'imagenes_producto_batch.php') ? 'active' : ''; ?>">
-                            <i class="fas fa-image"></i>
-                            <span>Ejemplo</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="../includes/imagenes_producto_batch.php" class="nav-link submenu-link <?php echo ($pagina_actual == 'imagenes_producto_batch.php') ? 'active' : ''; ?>">
-                            <i class="fas fa-image"></i>
-                            <span>Ejemplo</span>
+                        <a href="..\bodegas.php" class="nav-link submenu-link <?php echo ($pagina_actual == 'bodegas.php') ? 'active' : ''; ?>">
+                            <span>Bodegas</span>
                         </a>
                     </li>
                 </ul>
