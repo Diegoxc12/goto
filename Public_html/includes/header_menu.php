@@ -254,7 +254,7 @@ $pagina_actual = basename($_SERVER['PHP_SELF']);
             </li>
             
             <li class="nav-item">
-                <a href="/includes/dashboard.php" class="nav-link <?php echo ($pagina_actual=='usuarios.php')?'active':''; ?>">
+                <a href="../extras/usuarios.php" class="nav-link <?php echo ($pagina_actual=='usuarios.php')?'active':''; ?>">
                 <i class="fas fa-users"></i>
                     <span>Usuarios</span>
                 </a>
