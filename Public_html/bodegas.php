@@ -1,4 +1,5 @@
 <?php
+session_start();
 // bodegas_crud.php
 // CRUD completo para la tabla `bodegas` usando PDO ($pdo) desde conexion.php
 // Requiere PHP 8+
@@ -7,6 +8,8 @@
 // --- Config ---
 $TITLE = "Administración de Bodegas";
 $PER_PAGE = 10; // paginación
+$iduser = $_SESSION['user_id'] ;
+
 
 // --- Conexión ---
 require_once __DIR__ . '/includes/conexion.php'; // crea $pdo (PDO)
@@ -166,7 +169,7 @@ if (isset($_GET['msg'])){
           <input type="hidden" name="id_bodega" value="<?= h($editRow['id_bodega']) ?>">
         <?php else: ?>
           <input type="hidden" name="action" value="create">
-          <input type="hidden" name="creado_por" value="1">
+          <input type="hidden" name="creado_por" value="<?php echo $iduser ?>">
         <?php endif; ?>
         <label class="form-row">
           <span>Nombre de bodega</span>
