@@ -39,7 +39,6 @@ body {
     background: var(--darker-blue);
     z-index: 1000;
     padding: 1.25rem 0;
-    transition: var(--transition);
 }
 
 .logo-container {
@@ -86,10 +85,14 @@ body {
     text-align: center;
 }
 
-/* Contenido principal */
- .main-content {
-            margin-left: 280px;
+        /* Contenido principal */
+        .main-content {
             padding: 40px;
+            padding-left: 30px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            transition: padding-left 0.3s ease;
         }
 
 .page-header {
@@ -143,15 +146,11 @@ body {
 }
 
 .sidebar.collapsed {
-    width: 5rem;
+    width: 4.2rem;
 }
 
 .sidebar.collapsed .logo-container {
     display: none;
-}
-
-.sidebar.collapsed .nav-links {
-    margin-top: 1.25rem;
 }
 
 .sidebar.collapsed .nav-links span,
@@ -204,10 +203,8 @@ body {
 }
 
 .submenu-items {
-    padding-left: 2rem;
     max-height: 0;
     overflow: hidden;
-    transition: var(--transition);
 }
 
 .submenu-active {
@@ -215,37 +212,41 @@ body {
 }
 
 .submenu-link {
-    padding: 0.75rem 1rem !important;
     font-size: 0.9rem;
 }
 
-/* Botones */
+
+
+/* ════════════════════════════════════════════════════════════════
+   🟦 SECCIÓN: BOTONES
+   ════════════════════════════════════════════════════════════════ */
+
 .btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--border-radius);
+ width: 10%;
+    padding: 1rem;    border-radius: 15px;
     text-decoration: none;
-    color: var(--text-light);
-    background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
-    border: none;
-    transition: var(--transition);
-    font-size: 1rem;
+    color: var(--text-light);          /* texto claro */
+    background-color: var(--primary-blue); /* fondo principal */
+    border: 1px solid var(--primary-blue); /* borde principal */
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, var(--hover-blue), var(--dark-blue));
-    transform: translateY(-0.125rem);
-    box-shadow: 0 0.25rem 0.75rem var(--shadow-blue);
+    background-color: var(--darker-blue); /* fondo más oscuro al pasar el mouse */
+    border: 1px solid var(--secondary-blue);   /* borde más claro que el fondo */
+    color: var(--text-light);           /* mantener el texto visible */
 }
 
 .btn.active {
-    background: linear-gradient(135deg, var(--primary-blue), var(--darker-blue));
-    box-shadow: inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+    background-color: var(--secondary-blue); /* fondo activo */
+    color: white;
+    border-color: var(--secondary-blue);     /* borde igual que el fondo */
 }
+
 
 /* Contenedores y títulos */
 .wrap {
